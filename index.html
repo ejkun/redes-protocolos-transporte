@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protocolos de Transporte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/material.min.css">
+    <link rel="stylesheet" href="assets/index.css">
+    <script src="assets/material.min.js"></script>
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/index.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-drawer-button">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">Protocolos de Transporte</span>
+            </div>
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#scroll-tab-stop-wait" class="mdl-layout__tab is-active">Stop and Wait</a>
+                <a href="#scroll-tab-go-back-n" class="mdl-layout__tab">Go Back-n</a>
+                <a href="#scroll-tab-selective-repeat" class="mdl-layout__tab">Selective Repeat</a>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-stop-wait">
+                <div class="page-content">
+                    <div class="mdl-grid">
+                        <div class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop">
+                            <h3 class="title-center">Stop and Wait</h3>
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--12-col">
+                                    <form id="stop-wait" class="mdl-grid">
+                                        <div class="mdl-cell mdl-cell-4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input required id="packets-stop-wait" class="mdl-textfield__input" type="text" pattern="-?[0-9]*?" value="5">
+                                            <label class="mdl-textfield__label" for="stop-wait-input">Quantidade de Pacotes</label>
+                                            <span class="mdl-textfield__error">Quantidade de Pacotes Inválida</span>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell-4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input required id="delay-stop-wait" class="mdl-textfield__input" type="text" pattern="-?[0-9]*?" value="1000">
+                                            <label class="mdl-textfield__label" for="stop-wait-delay-input">Delay (ms)</label>
+                                            <span class="mdl-textfield__error">Valor inválido</span>
+                                        </div>
+                                        <button type="submit" id="execute-stop-wait" style="display:inline-block" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect mdl-cell mdl-cell-4-col ">Executar</button>
+                                    </form>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--12-col-phone">
+                                    <ul id="servidor-stop-wait" class="mdl-list">
+                                        <li class="mdl-list__item">
+                                            <span class="mdl-list__item-primary-content">
+                                                <b>Servidor</b>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+                                    <ul id="cliente-stop-wait" class="mdl-list">
+                                        <li class="mdl-list__item">
+                                            <span class="mdl-list__item-primary-content">
+                                                <b>Cliente</b>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-go-back-n">
+                <div class="page-content">
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-hide-tablet mdl-cell--hide--phone"></div>
+                        <div class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+                            <h3>Go Back-N</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-selective-repeat">
+                <div class="page-content">
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--2-col mdl-cell-hide-tablet mdl-cell--hide--phone"></div>
+                        <div class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+                            <h3>Selective Repeat</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
